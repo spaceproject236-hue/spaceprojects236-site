@@ -1665,7 +1665,18 @@ input:focus, select:focus, textarea:focus {
   }
 
   .hamburger {
-    display: flex;
+    display: flex !important;
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    z-index: 10000;
+  }
+
+  .hamburger.open {
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    z-index: 10001;
   }
 
   .nav-links {
@@ -1686,6 +1697,20 @@ input:focus, select:focus, textarea:focus {
 
   .nav-links.open {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(8,8,16,0.99);
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    overflow-y: auto;
   }
 
   .nav-links a {
@@ -1709,29 +1734,25 @@ input:focus, select:focus, textarea:focus {
     margin-top: 16px;
   }
 
+  .nav-dropdown {
+    display: contents;
+  }
+
   .nav-dropdown-toggle {
-    font-size: 22px !important;
-    color: #4da6ff !important;
+    display: none;
   }
 
   .nav-dropdown-menu {
+    display: contents !important;
     position: static !important;
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 8px 0 0 0 !important;
-    gap: 16px;
-  }
-
-  .nav-dropdown.open .nav-dropdown-menu {
-    display: flex !important;
+    padding: 0 !important;
   }
 
   .nav-dropdown-menu a {
-    font-size: 16px !important;
+    font-size: 18px !important;
     color: #4da6ff !important;
   }
 
