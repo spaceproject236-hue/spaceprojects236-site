@@ -1,6 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Space Projects 236 loaded');
 
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close menu when a link is clicked (but not the Members dropdown toggle)
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
   // Members dropdown: click toggle on touch/mobile, hover handled by CSS on desktop
   document.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
     const toggle = dropdown.querySelector('.nav-dropdown-toggle');
