@@ -88,11 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Active nav link highlighting based on current page
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links > a, .nav-dropdown-menu a').forEach((link) => {
-    const linkPath = link.getAttribute('href').split('#')[0] || 'index.html';
-    if (linkPath === currentPath) {
+  // Active nav link highlighting
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const linkPage = link.getAttribute('href').split('#')[0].split('/').pop();
+    if (linkPage === currentPage) {
       link.classList.add('active');
     }
   });
