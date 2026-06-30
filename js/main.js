@@ -1,3 +1,9 @@
+// Force scroll to top on page load (fixes browser scroll restoration)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Space Projects 236 loaded');
 

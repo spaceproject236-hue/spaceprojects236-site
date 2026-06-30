@@ -228,36 +228,19 @@ p {
   font-size: 0.85rem;
 }
 
-.nav-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.nav-phone, .footer-phone {
   color: #ccd8ee;
   font-size: 13px;
   text-decoration: none;
+}
+
+.nav-phone {
   margin-right: 16px;
   white-space: nowrap;
 }
 
-.nav-phone:hover {
+.nav-phone:hover, .footer-phone:hover {
   color: #4da6ff;
-}
-
-.footer-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #c8d8e8;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.footer-phone:hover {
-  color: #4da6ff;
-}
-
-.phone-icon {
-  flex-shrink: 0;
 }
 
 /* Header */
@@ -1773,9 +1756,8 @@ input:focus, select:focus, textarea:focus {
   }
 
   .nav-phone {
-    font-size: 16px !important;
+    font-size: 14px !important;
     margin-right: 0;
-    color: #ccd8ee !important;
   }
 
   .nav-dropdown {
