@@ -1,10 +1,8 @@
 // Force scroll to top on every page load, including back/forward navigation
 function forceScrollTop() {
-  if (!window.location.hash) {
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-  }
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
 }
 
 forceScrollTop();
