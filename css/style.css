@@ -228,6 +228,28 @@ p {
   font-size: 0.85rem;
 }
 
+.nav-phone {
+  color: #ccd8ee;
+  font-size: 13px;
+  text-decoration: none;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+.nav-phone:hover {
+  color: #4da6ff;
+}
+
+.footer-phone {
+  color: #c8d8e8;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-phone:hover {
+  color: #4da6ff;
+}
+
 /* Header */
 .site-header {
   position: fixed;
@@ -321,15 +343,21 @@ p {
 }
 
 nav a {
-  color: #ddeeff;
+  color: #ccd8ee;
+}
+
+.nav-links a {
+  color: #ccd8ee !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--heading);
+  color: #4da6ff !important;
 }
 
 .nav-links a.active {
-  color: #4da6ff;
+  color: #4da6ff !important;
 }
 
 .nav-dropdown {
@@ -341,7 +369,7 @@ nav a {
   align-items: center;
   gap: 4px;
   cursor: pointer;
-  color: #4da6ff;
+  color: #ccd8ee;
   font-weight: 600;
 }
 
@@ -1732,6 +1760,12 @@ input:focus, select:focus, textarea:focus {
     font-weight: 700 !important;
     font-size: 18px !important;
     margin-top: 16px;
+  }
+
+  .nav-phone {
+    font-size: 16px !important;
+    margin-right: 0;
+    color: #ccd8ee !important;
   }
 
   .nav-dropdown {
