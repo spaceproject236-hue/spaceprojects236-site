@@ -391,7 +391,7 @@ nav a {
 .nav-dropdown-menu a {
   display: block;
   padding: 10px 16px;
-  color: #ccd8ee;
+  color: #ccd8ee !important;
   font-size: 13px;
   text-decoration: none;
 }
@@ -1785,16 +1785,6 @@ input:focus, select:focus, textarea:focus {
     padding: 0 !important;
   }
 
-  .nav-dropdown-menu a {
-    font-size: 22px !important;
-    color: #ccd8ee !important;
-    text-align: center;
-  }
-
-  .nav-dropdown-menu a:hover {
-    color: #4da6ff !important;
-  }
-
   .overview-grid,
   .more-services-grid,
   .retainer-grid,
@@ -1831,12 +1821,17 @@ input:focus, select:focus, textarea:focus {
   .nav-links.open {
     display: flex !important;
   }
-  .nav-dropdown-menu a {
+  .nav-dropdown-menu a,
+  .nav-dropdown-menu a:link,
+  .nav-dropdown-menu a:visited {
     color: #ccd8ee !important;
     font-size: 22px !important;
-    text-align: center;
+    text-align: center !important;
+    display: block !important;
   }
-  .nav-dropdown-menu a:hover {
+
+  .nav-dropdown-menu a:hover,
+  .nav-dropdown-menu a:active {
     color: #4da6ff !important;
   }
 }
