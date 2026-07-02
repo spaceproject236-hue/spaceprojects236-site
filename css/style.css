@@ -369,6 +369,11 @@ nav a {
   font-weight: 600;
 }
 
+.nav-dropdown-toggle.active,
+.nav-dropdown-toggle:hover {
+  color: #4da6ff !important;
+}
+
 .nav-dropdown-menu {
   display: none;
   position: absolute;

@@ -122,4 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // Also highlight Members dropdown toggle when on a members-related page
+  const membersToggle = document.querySelector('.nav-dropdown-toggle');
+  if (membersToggle) {
+    const membersPages = ['members.html'];
+    if (membersPages.includes(currentPage)) {
+      membersToggle.classList.add('active');
+      membersToggle.style.color = '#4da6ff';
+    }
+  }
 });
