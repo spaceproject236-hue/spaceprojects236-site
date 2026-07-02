@@ -1786,8 +1786,9 @@ input:focus, select:focus, textarea:focus {
   }
 
   .nav-dropdown-menu a {
-    font-size: 18px !important;
+    font-size: 22px !important;
     color: #ccd8ee !important;
+    text-align: center;
   }
 
   .nav-dropdown-menu a:hover {
@@ -1832,7 +1833,8 @@ input:focus, select:focus, textarea:focus {
   }
   .nav-dropdown-menu a {
     color: #ccd8ee !important;
-    font-size: 18px !important;
+    font-size: 22px !important;
+    text-align: center;
   }
   .nav-dropdown-menu a:hover {
     color: #4da6ff !important;
