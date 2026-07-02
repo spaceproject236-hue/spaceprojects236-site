@@ -1787,6 +1787,10 @@ input:focus, select:focus, textarea:focus {
 
   .nav-dropdown-menu a {
     font-size: 18px !important;
+    color: #ccd8ee !important;
+  }
+
+  .nav-dropdown-menu a:hover {
     color: #4da6ff !important;
   }
 
@@ -1825,6 +1829,13 @@ input:focus, select:focus, textarea:focus {
   }
   .nav-links.open {
     display: flex !important;
+  }
+  .nav-dropdown-menu a {
+    color: #ccd8ee !important;
+    font-size: 18px !important;
+  }
+  .nav-dropdown-menu a:hover {
+    color: #4da6ff !important;
   }
 }
 
