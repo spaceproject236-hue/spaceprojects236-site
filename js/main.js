@@ -101,11 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Active nav link highlighting
   const allNavLinks = document.querySelectorAll('.nav-links a');
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPage = window.location.pathname;
+
+  // Normalize: remove leading slash, handle root, remove trailing slash
+  currentPage = currentPage.replace(/^\//, '').replace(/\/$/, '');
+  if (currentPage === '' || currentPage === '/') currentPage = 'index.html';
+  if (!currentPage.includes('.')) currentPage = currentPage + '.html';
 
   allNavLinks.forEach(link => {
     link.classList.remove('active');
-    const linkPage = link.getAttribute('href').split('#')[0].split('/').pop();
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Get just the page filename from the href, ignore hash
+    let linkPage = href.split('#')[0].split('/').pop();
+    if (!linkPage || linkPage === '') linkPage = 'index.html';
+    if (!linkPage.includes('.')) linkPage = linkPage + '.html';
+
     if (linkPage === currentPage) {
       link.classList.add('active');
     }

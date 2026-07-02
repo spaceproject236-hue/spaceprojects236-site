@@ -353,6 +353,7 @@ nav a {
 
 .nav-links a.active {
   color: #4da6ff !important;
+  font-weight: 600 !important;
 }
 
 .nav-dropdown {
