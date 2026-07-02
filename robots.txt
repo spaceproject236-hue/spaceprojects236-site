@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://spaceprojects236.com/sitemap.xml
