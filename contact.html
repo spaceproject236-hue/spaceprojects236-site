@@ -9,6 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-H7MT1WZ5E9');
   </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("7ciC8iPbVBZE7nAED");
+  </script>
   <script>
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -71,17 +75,17 @@
             <div class="form-row">
               <div>
                 <label for="full-name">Full name</label>
-                <input type="text" id="full-name" name="full-name" required>
+                <input type="text" id="full-name" name="from_name" required>
               </div>
               <div>
                 <label for="business-name">Business name</label>
-                <input type="text" id="business-name" name="business-name">
+                <input type="text" id="business-name" name="business_name">
               </div>
             </div>
             <div class="form-row">
               <div>
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="from_email" required>
               </div>
               <div>
                 <label for="phone">Phone number</label>
@@ -90,7 +94,7 @@
             </div>
 
             <label for="project-type">What are you looking for?</label>
-            <select id="project-type" name="project-type">
+            <select id="project-type" name="service_interest">
               <option>Website Design &amp; Development</option>
               <option>Mobile App Development</option>
               <option>Custom Software / SaaS</option>
@@ -100,10 +104,10 @@
             </select>
 
             <label for="project-details">Tell us about your project</label>
-            <textarea id="project-details" name="project-details" rows="5"></textarea>
+            <textarea id="project-details" name="message" rows="5"></textarea>
 
             <label for="referral">How did you hear about us?</label>
-            <select id="referral" name="referral">
+            <select id="referral" name="how_heard">
               <option>Phone call from our team</option>
               <option>Referral</option>
               <option>Google search</option>
@@ -113,14 +117,14 @@
 
             <label>Membership option</label>
             <label class="membership-option" for="opt-call-only">
-              <input type="radio" id="opt-call-only" name="membership-option" value="call-only">
+              <input type="radio" id="opt-call-only" name="membership_option" value="call-only">
               <div class="membership-option-body">
                 <strong>Free Discovery Call Only</strong>
                 <p>Schedule a free 15-minute call with Brandon. No commitment required.</p>
               </div>
             </label>
             <label class="membership-option" for="opt-call-cadet">
-              <input type="radio" id="opt-call-cadet" name="membership-option" value="call-cadet">
+              <input type="radio" id="opt-call-cadet" name="membership_option" value="call-cadet">
               <div class="membership-option-body">
                 <strong>🚀 Free Discovery Call + Become a Space Cadet (Free) <span class="recommended">Recommended</span></strong>
                 <p>Get the discovery call AND create your free Space Cadet member account to track your project, upload assets, and manage your build.</p>

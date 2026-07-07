@@ -9,6 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-H7MT1WZ5E9');
   </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init("7ciC8iPbVBZE7nAED");
+  </script>
   <script>
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -140,21 +144,21 @@
     <div class="container">
       <div class="signup-form-wrap">
         <h2>Create your free Space Cadet account</h2>
-        <form id="signup-form">
+        <form id="members-form">
           <label for="signup-name">Full name</label>
-          <input type="text" id="signup-name" name="signup-name" required>
+          <input type="text" id="signup-name" name="from_name" required>
 
           <label for="signup-email">Email address</label>
-          <input type="email" id="signup-email" name="signup-email" required>
+          <input type="email" id="signup-email" name="from_email" required>
 
           <label for="signup-phone">Phone number</label>
-          <input type="tel" id="signup-phone" name="signup-phone">
+          <input type="tel" id="signup-phone" name="phone">
 
           <label for="signup-business">Business or project name</label>
-          <input type="text" id="signup-business" name="signup-business">
+          <input type="text" id="signup-business" name="business_name">
 
           <label for="signup-building">What are you building?</label>
-          <select id="signup-building" name="signup-building">
+          <select id="signup-building" name="service_interest">
             <option>Website</option>
             <option>Mobile App</option>
             <option>Custom Software</option>
@@ -163,7 +167,7 @@
           </select>
 
           <label for="signup-idea">Tell us about your idea</label>
-          <textarea id="signup-idea" name="signup-idea" rows="4"></textarea>
+          <textarea id="signup-idea" name="message" rows="4"></textarea>
 
           <button type="submit" class="btn btn-primary btn-submit-full">Launch my Space Cadet account 🚀</button>
           <p class="form-submit-note">Free forever. No credit card. Cancel anytime.</p>
