@@ -87,6 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       emailjs.sendForm('service_t694b8o', 'sp236_contact_form', contactForm)
         .then(function() {
+          // Send auto-reply to the person who submitted
+          const formData = new FormData(contactForm);
+          emailjs.send('service_t694b8o', 'sp236_auto_reply', {
+            from_name: formData.get('from_name'),
+            from_email: formData.get('from_email'),
+          });
+
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
           const banner = document.createElement('div');
@@ -118,6 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       emailjs.sendForm('service_t694b8o', 'sp236_contact_form', membersForm)
         .then(function() {
+          // Send auto-reply to the person who submitted
+          const formData = new FormData(membersForm);
+          emailjs.send('service_t694b8o', 'sp236_auto_reply', {
+            from_name: formData.get('from_name'),
+            from_email: formData.get('from_email'),
+          });
+
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
           const banner = document.createElement('div');
